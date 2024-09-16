@@ -48,41 +48,40 @@ public class Branching {
                 break;
             default:
                 System.out.println("Character is not an operator");
-        }
 
-        // class list
+                // class list
+                String[] semesters = {"Fall", "Spring"};
+                String semester = semesters[new Random().nextInt(semesters.length)];
 
-        String[] semesters = {"Fall", "Spring"};
-        String semester = semesters[new Random().nextInt(semesters.length)];
+                String[] courses = {"CS", "ES"};
+                String course = courses[new Random().nextInt(courses.length)];
 
-        String[] courses = {"CS", "ES"};
-        String course = courses[new Random().nextInt(courses.length)];
+                String[] programs = {"Introduction to Computer Science", "English literature", "OOP", "Introduction to journalism"};
 
-        String[] programs = {"Introduction to Computer Science", "English literature", "OOP", "Introduction to journalism"};
-
-        System.out.println(semester + " " + course);
-        switch (semester) {
-            case ("Fall"):
-                switch (course) {
-                    case ("CS"):
-                        String programFallCS = programs[0];
-                        System.out.println("In fall CS's program is " + programFallCS);
-                        break;
-                    case ("ES"):
-                        String programFallES = programs[2];
-                        System.out.println("In fall ES's program is " + programFallES);
-                        break;
-                }
-            case ("Spring"):
-                switch (course) {
-                    case ("CS"):
-                        String programSpringCS = programs[1];
-                        System.out.println("In spring CS's program is " + programSpringCS);
-                        break;
-                    case ("ES"):
-                        String prograSpringES = programs[3];
-                        System.out.println("In spring ES's program is " + prograSpringES);
-                        break;
+                System.out.println(semester + " " + course);
+                switch (semester) {
+                    case ("Fall"):
+                        switch (course) {
+                            case ("CS"):
+                                String programFallCS = programs[0];
+                                System.out.println("In fall CS's program is " + programFallCS);
+                                break;
+                            case ("ES"):
+                                String programFallES = programs[2];
+                                System.out.println("In fall ES's program is " + programFallES);
+                                break;
+                        }
+                    case ("Spring"):
+                        switch (course) {
+                            case ("CS"):
+                                String programSpringCS = programs[1];
+                                System.out.println("In spring CS's program is " + programSpringCS);
+                                break;
+                            case ("ES"):
+                                String prograSpringES = programs[3];
+                                System.out.println("In spring ES's program is " + prograSpringES);
+                                break;
+                        }
                 }
         }
     }

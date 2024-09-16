@@ -1,4 +1,5 @@
 package Homework;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class Looping {
         System.out.println(number + "'s digit's count is " + count);
 
         //2. largesrt and smallest numbers
-        System.out.println("Please, input number you want or input 0, if you want to finish.");
+        System.out.println("Please, input as many  numbers as you want or input 0, if you want to finish.");
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         Scanner scanner = new Scanner(System.in);
         int number1;
@@ -32,7 +33,7 @@ public class Looping {
             if (variable > max) {
                 max = variable;
             }
-            if (variable > min) {
+            if (variable < min) {
                 min = variable;
             }
         }
@@ -47,28 +48,30 @@ public class Looping {
             int y = scanner.nextInt();
             int sum = x + y;
             System.out.println("The sum of " + x + " and " + y + " is: " + sum);
-            System.out.print("Do you want to repeat? If not, plesae, enter Finish");
+            scanner.nextLine();
+            System.out.print("Do you want to repeat? If not, plesae, enter 0");
             message = scanner.nextLine();
         }
-        while (message.equals("Finish"));
+        while (!message.equalsIgnoreCase("0"));
         System.out.println("Thank you for playing with me.");
 
         //4. calculating the Power of a Number
         int n = scanner.nextInt();
         int k = scanner.nextInt();
+        int power = 1;
         for (int i = 1; i < k; i++) {
-            int power = n;
-            power = power * n;
+            power *= n;
         }
+        System.out.println(power);
 
         //5. Armstrong numbers
 //        ArrayList<Integer> armstrongNumbers = new ArrayList<Integer>();
-//        for (int i = 1; i < 501; i++){
-//           int digitsOfI = String.valueOf(i).length();
-//           int firstNumber = i / 100;
-//           int secondNumber  = i / 10;
+//        for (int i = 1; i < 501; i++) {
+//            int digitsOfI = String.valueOf(i).length();
+//            int firstNumber = i / 100;
+//            int secondNumber = i / 10;
 //
-//           if ()
+//            if ()
 //        }
 
         //6. Fibonacci
@@ -90,18 +93,19 @@ public class Looping {
         int size = scanner.nextInt();
 
         for (int i = 1; i <= size; i++) {
-            for (int j = 1; j <= size; j++) {
+            for (int j = size; j > i; j--) {
                 System.out.print(" ");
             }
-            for (int l = 1; l <= (size * 2 + 1); l++) {
+            for (int l = 1; l <= (i * 2 - 1); l++) {
                 System.out.print("*");
             }
+            System.out.println();
         }
         for (int i = size - 1; i >= 1; i--) {
-            for (int j = size; j >= 1; j--) {
+            for (int j = size; j > i; j--) {
                 System.out.print(" ");
             }
-            for (int l = 1; l <= (size * 2 + 1); l++) {
+            for (int l = 1; l <= (i * 2 - 1); l++) {
                 System.out.print("*");
             }
             System.out.println();
