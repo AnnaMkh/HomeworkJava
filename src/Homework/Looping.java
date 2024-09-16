@@ -64,7 +64,7 @@ public class Looping {
         }
         System.out.println(power);
 
-        //5. Armstrong numbers
+        //5. Armstrong numbers------------------
 //        ArrayList<Integer> armstrongNumbers = new ArrayList<Integer>();
 //        for (int i = 1; i < 501; i++) {
 //            int digitsOfI = String.valueOf(i).length();
@@ -86,7 +86,7 @@ public class Looping {
         }
         System.out.println("Fibonacci sequence " + n + "-th  member is " + fiboNumber);
 
-        //7.
+        //7.-------------------------
 
         //8. diamond
         System.out.println("Please, enter diamond metric");
