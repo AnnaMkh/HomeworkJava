@@ -24,7 +24,7 @@ public class Arrays {
         int[] alreadyDeleted = new int[deleteMember.length - 1];
         int j = 0;
 
-        for (int i : deleteMember) {
+        for (int i = 0; i < deleteMember.length; i++) {
             if (deleteMember[i] != 2) {
                 alreadyDeleted[j++] = deleteMember[i];
             }
