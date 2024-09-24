@@ -65,14 +65,11 @@ public class Looping {
         System.out.println(power);
 
         //5. Armstrong numbers------------------
-//        ArrayList<Integer> armstrongNumbers = new ArrayList<Integer>();
-//        for (int i = 1; i < 501; i++) {
-//            int digitsOfI = String.valueOf(i).length();
-//            int firstNumber = i / 100;
-//            int secondNumber = i / 10;
-//
-//            if ()
-//        }
+        for (int num = 1; num <= 500; num++) {
+            if (isArmstrong(num)) {
+                System.out.println(num);
+            }
+        }
 
         //6. Fibonacci
         System.out.println("Please enter positive number for calculating Fibonacci number");
@@ -87,6 +84,15 @@ public class Looping {
         System.out.println("Fibonacci sequence " + n + "-th  member is " + fiboNumber);
 
         //7.-------------------------
+        double ln2 = 0.0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                ln2 -= 1.0 / i; // subtract if even index
+            } else {
+                ln2 += 1.0 / i; // add if odd index
+            }
+        }
+        System.out.println("The approximation of ln(2) with " + n + " terms is: " + ln2);
 
         //8. diamond
         System.out.println("Please, enter diamond metric");
@@ -110,6 +116,18 @@ public class Looping {
             }
             System.out.println();
         }
+    }
+
+    public static boolean isArmstrong(int number) {
+        int originalNumber = number;
+        int sum = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+            sum += digit * digit * digit;
+            number /= 10;
+        }
+        return sum == originalNumber;
     }
 }
 

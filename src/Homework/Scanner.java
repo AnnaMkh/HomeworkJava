@@ -6,7 +6,7 @@ public class Scanner {
         //1. Count Characters in a String
         String input = "Hello";
         char[] counts = input.toCharArray();
-        int output= counts.length;
+        int output = counts.length;
         System.out.println("The string has " + output + " characters.");
 
         //2Print Each Character on a New Line
@@ -15,7 +15,7 @@ public class Scanner {
         }
 
         //3 String Repetition
-        String repetition  = (input.concat(input)).concat(input);
+        String repetition = (input.concat(input)).concat(input);
         System.out.println(repetition);
     }
 }
