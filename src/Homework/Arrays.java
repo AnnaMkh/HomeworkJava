@@ -16,7 +16,8 @@ public class Arrays {
             if (i < min) {
                 min = i;
             }
-        }  System.out.println("The maximum value in minMaxArray is " + max + ".");
+        }
+        System.out.println("The maximum value in minMaxArray is " + max + ".");
         System.out.println("The minimum value in minMaxArray is " + min + ".");
 
         //2. delete array member
@@ -32,8 +33,17 @@ public class Arrays {
         System.out.println(java.util.Arrays.toString(alreadyDeleted));
 
         //3. sum of 4 values----------------
-        int[] additives = new int[3];
-        int sum = new Scanner(System.in).nextInt();
-        int  additive0,  additive1,  additive2,  additive3;
+        int givenNumber = 5;
+        for (int nn1 = 0; nn1 <= givenNumber; nn1++) {
+            for (int nn2 = 0; nn2 <= givenNumber; nn2++) {
+                for (int nn3 = 0; nn3 <= givenNumber; nn3++) {
+                    int nn4 = givenNumber - nn1 - nn2 - nn3;
+                    if (nn4 >= 0) {
+                        int nums[] = {nn1, nn2, nn3, nn4};
+                        System.out.println(java.util.Arrays.toString(nums));
+                    }
+                }
+            }
+        }
     }
 }
