@@ -5,11 +5,11 @@ public class Recursion {
 
         //2 fibonacci
         int n = 5;
-        //  System.out.println(fibonacci(n));
+        System.out.println(fibonacci(n));
 
         //3 factorial
         int n1 = 6;
-        //  System.out.println(factorial(n1));
+        System.out.println(factorial(n1));
 
         //4 power
         int n2 = 5;
@@ -31,8 +31,14 @@ public class Recursion {
 
         //8
         int a = 1555;
-        char[] as = String.valueOf(a).toCharArray();
-        System.out.println(as);
+        System.out.println(sumOfDogits(12586665));
+    }
+//-----------------------------------------------------------------------------------------------------------------
+
+   public static int sumOfDogits(int n){
+        if (n == 0)
+            return 0;
+        return (n % 10 + sumOfDogits(n / 10));
     }
 
     public static boolean poliandrome(String word) {
