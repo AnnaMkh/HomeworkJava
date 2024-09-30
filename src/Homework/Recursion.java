@@ -19,7 +19,38 @@ public class Recursion {
         //5 Min max from array-recursion
         int[] arrayRecursion = {15, 20, 35, 1, -45, -80};
         System.out.println(findMinElement(arrayRecursion, arrayRecursion.length - 1));
-        System.out.println(findMaxElement(arrayRecursion, arrayRecursion.length-1 ));
+        System.out.println(findMaxElement(arrayRecursion, arrayRecursion.length - 1));
+
+        //6 revert array
+        printReversedArray(arrayRecursion, arrayRecursion.length - 1);
+        System.out.println();
+
+        //7 poliandrome
+        System.out.println(poliandrome("Hello"));
+        System.out.println(poliandrome("ol111lo"));
+
+        //8
+        int a = 1555;
+        char[] as = String.valueOf(a).toCharArray();
+        System.out.println(as);
+    }
+
+    public static boolean poliandrome(String word) {
+        if (word.length() == 0 || word.length() == 1) {
+            return true;
+        }
+        if (word.charAt(0) == word.charAt(word.length() - 1)) {
+            return poliandrome(word.substring(1, word.length() - 1));
+        }
+        return false;
+    }
+
+    public static void printReversedArray(int[] array, int nnn) {
+        if (nnn == 0) {
+            return;
+        }
+        System.out.print(array[nnn] + " ");
+        printReversedArray(array, nnn - 1);
     }
 
     public static int findMinElement(int[] arrayRecursion, int nn) {
