@@ -35,6 +35,6 @@ public class Point {
     }
 
     public String toString() {
-        return  ("Point has two  coordinates " + x + "." );
+        return  ("Point has two  coordinates " + getX() + "," +  getY());
     }
 }
