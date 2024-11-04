@@ -13,21 +13,19 @@ public class Library {
         books.add(book);
     }
 
-    public Book getBook(String bookName) {
+    public Book searchBook(String bookName) {
         for (Book book : books) {
-            if (book.getAuthor().equals(bookName)) {
+            if (book.getNameOfBook().equals(bookName)) {
+                System.out.println("Book: " + book.getNameOfBook());
                 return book;
             }
-        }
-        return null;
+        } return null;
     }
 
-    public String[] getBookNames() {
+    public void getBookNames() {
         String[] bookNames = new String[books.size()];
         for (int i = 0; i < books.size(); i++) {
-            bookNames[i] = books.get(i).getNameOfBook();
-
+            System.out.println(bookNames[i] = books.get(i).getNameOfBook());
         }
-        return bookNames;
     }
 }
