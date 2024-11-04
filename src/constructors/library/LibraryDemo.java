@@ -1,5 +1,6 @@
 package constructors.library;
 
+import java.util.Scanner;
 import constructors.Line;
 
 public class LibraryDemo {
@@ -14,5 +15,15 @@ public class LibraryDemo {
         library.getBookNames();
         library.searchBook("Giqor");
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input 0, 1 or 2.");
+        int number = scanner.nextInt();
+        switch (number) {
+            case (0) : break;
+            case (1) : library.getBookNames();
+            case (2) :
+                System.out.println("input book's name");
+                library.searchBook( scanner.nextLine());
+        }
     }
 }
