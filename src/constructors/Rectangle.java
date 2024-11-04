@@ -1,12 +1,10 @@
 package constructors;
 
-import copyConsrtuctor.Point;
-
 public class Rectangle {
     private double weight,  hight;
-    private copyConsrtuctor.Point corner;
+    private Point corner;
 
-    public Rectangle(double weight, double hight, copyConsrtuctor.Point corner) {
+    public Rectangle(double weight, double hight, Point corner) {
         this.weight = weight;
         this.hight = hight;
         this.corner = new Point(corner);

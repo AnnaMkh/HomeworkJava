@@ -7,6 +7,6 @@ public class LineDemo {
 
         Line line = new Line(x, x1, y, y1);
         System.out.println(line.lengh());
-        System.out.println(line.midPoint().toString());
+        System.out.println("Midpoint - " + line.midPoint().toString());
     }
 }

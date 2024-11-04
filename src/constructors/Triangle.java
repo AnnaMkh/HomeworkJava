@@ -88,11 +88,11 @@ public class Triangle {
         return perimeter;
     }
 
-    public double area(double x, double y, double x1, double y1, double x2, double y2) {
+    public double area() {
         return 0.5 * Math.abs(x * (y1 - y2) + x1 * (y2 - y) + x2 * (y - y1));
     }
 
-    public Point centerOfMass(double x, double y, double x1, double y1, double x2, double y2) {
+    public Point centerOfMass() {
         double centroidX = (x1 + x2 + x) / 3;
         double centroidY = (y1 + y2 + y) / 3;
         return new Point(centroidX, centroidY);
@@ -119,4 +119,19 @@ public class Triangle {
         }
         return false;
     }
+    public boolean isSceles() {
+        Line l = new Line(x, y, x1, y1);
+        Line l1 = new Line(x1, y1, x2, y2);
+        Line l2 = new Line(x2, y2, x, y);
+        if (l.lengh() != l1.lengh() && l.lengh() != l2.lengh() && l1.lengh() != l2.lengh()) {
+            System.out.println("The triangle is sceles.");
+            return true;
+        }
+        return false;
+    }
+    public String toString() {
+        return  ("Triangle has three lines with parameters:  " +  "area: "  + area() + ", centerOfMass: "+ centerOfMass()
+                + ", isEquilateral: " + isEquilateral() + ", isIsosceles: " +isIsosceles() + " , isSceles" + isSceles());
+    }
+
 }
