@@ -1,0 +1,4 @@
+3 4
+b g r y
+g g r r
+y y w b

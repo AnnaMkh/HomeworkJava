@@ -20,10 +20,12 @@ public class LibraryDemo {
         int number = scanner.nextInt();
         switch (number) {
             case (0) : break;
-            case (1) : library.getBookNames();
+            case (1) : library.getBookNames(); break;
             case (2) :
                 System.out.println("input book's name");
                 library.searchBook( scanner.nextLine());
+                break;
+
         }
     }
 }
